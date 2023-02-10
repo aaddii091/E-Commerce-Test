@@ -1,0 +1,814 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.head {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+}
+.head_img {
+  height: 100%;
+  width: 100%;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.head_img img {
+  transform: scale(0.8);
+}
+.head_search {
+  height: 80px;
+  width: 100%;
+  margin: 10px 10px 10px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head_search form {
+  display: inline-flex;
+  background-color: rgb(255, 255, 255);
+  padding: 4px;
+  border: 1px solid black;
+}
+.head_search button {
+  padding: 7px 20px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Futura LT Light";
+  border: 1px solid rgba(0, 0, 0, 0.267);
+}
+.search {
+  background-color: #02a4ff;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.head_search input {
+  margin: 7px 30px;
+  border: 1px solid rgba(107, 0, 0, 0);
+}
+.head_search i {
+  transform: rotate(-90deg);
+}
+.head_cart {
+  height: 80px;
+  width: 100%;
+  margin: 10px 50px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.show {
+  display: none;
+}
+.hidden i {
+  transform: scale(2);
+  margin: 0px 20px;
+  padding-right: 10px;
+}
+.hiddenover {
+  display: none;
+}
+.hidden {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1236px) {
+  .phone h4 {
+    display: none !important;
+  }
+  .show {
+    display: block !important;
+  }
+  .shop_card h2 {
+    font-size: 15px !important;
+  }
+  .stars {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 880px) {
+  #headbtn {
+    display: none !important;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.8) !important;
+  }
+  .navbar ul {
+    display: none !important;
+  }
+  .hiddenover {
+    display: block !important;
+  }
+  .rate {
+    font-size: 10px !important;
+  }
+}
+.phone i {
+  transform: scale(1.5);
+  color: rgba(1, 158, 1, 0);
+  padding: 0px 12px 0px 5px;
+  -webkit-text-stroke: 0.5px rgb(123, 255, 0);
+}
+.head_cart h4 {
+  border-right: 1px solid;
+  border-radius: 0px;
+  border-color: rgba(245, 222, 179, 0.548);
+  /* border: 2px solid white; */
+  padding: 10px;
+}
+.phone i {
+  transform: scale(1.5);
+
+  padding: 10px 12px 10px 16px;
+}
+/* .nine {
+  display: none;
+} */
+.searched {
+  display: none !important;
+}
+.searched i,
+.cart i,
+.heart i {
+  transform: scale(1.5);
+  color: rgb(255, 255, 255);
+  padding: 10px 12px 10px 16px;
+}
+.searched,
+.cart,
+.heart,
+.phone {
+  display: flex;
+  align-items: center;
+  font-family: "Futura LT light";
+
+  font-size: 14px;
+
+  line-height: 22px;
+}
+/* --------------------------------Navbar */
+.navbar_box {
+  background-color: rgb(255, 66, 66);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+.navbar ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  padding: 0px 10px 0px 10px;
+  font-family: "Futura LT light";
+  margin: 1.75vw;
+  cursor: pointer;
+  padding-bottom: 2px;
+  font-size: 1.3rem;
+  transition: color 0.5s ease-in-out;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 744px) {
+  .head_search {
+    display: none !important;
+  }
+  .head {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .head_cart {
+    margin: 10px 20px;
+    justify-content: flex-end;
+  }
+  .searched {
+    display: flex !important;
+
+    align-items: center;
+  }
+  .maincard {
+    top: 0vh !important;
+  }
+  .btnslid {
+    z-index: 2;
+    position: fixed;
+    top: 60%;
+    right: 15%;
+    padding: 1vh 4vw;
+    font-family: "Futura LT Light";
+    font-size: 10px !important;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+  }
+  .shop_card {
+    font-size: 10px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .shop_cont h1 {
+    line-height: 25px !important;
+  }
+}
+@media screen and (max-width: 425px) {
+  .card_1 {
+    background-color: rgb(255, 255, 255);
+    width: 25vw;
+    max-width: 490px;
+    min-width: 365px !important;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    text-align: center;
+    padding: 0px !important;
+    height: 100%;
+    margin: 10px 0px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.6) !important;
+  }
+}
+@media screen and (max-width: 433px) {
+  .head_img {
+    height: auto !important;
+    width: 40% !important;
+    margin: 10px 0px !important;
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8) !important;
+  }
+}
+.navbar ul li:hover {
+  color: black;
+}
+.nav_1 {
+  padding: 0px 20px;
+  margin-left: 4vw;
+
+  /* background-color: rgb(255, 152, 152); */
+}
+.nav_1 i {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.nav_1 button {
+  letter-spacing: 1px;
+
+  margin: 5px 5px;
+  padding: 7px 20px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Futura LT Light";
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  background-color: rgba(240, 248, 255, 0);
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.nav_1 button i {
+  margin: 5px;
+  transform: rotate(-90deg);
+}
+
+.navbar img {
+  margin: 5px;
+}
+/* ----------------------------------------NavAnimation */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  padding-bottom: 3px;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.hover-underline-animation1 {
+  display: inline-block;
+  position: relative;
+  color: #000000;
+  padding-bottom: 3px;
+}
+
+.hover-underline-animation1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+
+  background-color: #3ed2ff;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation1:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* -----------------------------slider */
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  transform: scale(1);
+}
+.btnslid {
+  z-index: 2;
+  position: fixed;
+  top: 60%;
+  right: 15%;
+  padding: 1vh 4vw;
+  font-family: "Futura LT Light";
+  font-size: 20px;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+}
+/* ---------------------------FlashCards */
+.card {
+  z-index: 10;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: auto;
+  font-family: "Futura LT Light";
+  letter-spacing: 1px;
+  font-size: 15px;
+  /* display: flex;*/
+  flex-wrap: wrap;
+}
+.card_1 {
+  background-color: rgb(255, 255, 255);
+  width: 25vw;
+  max-width: 490px;
+  min-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+  text-align: center;
+  padding: 5px 20px 20px 20px;
+  height: 100%;
+  margin: 20px 0px;
+}
+.card_1 h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  padding: 10px 0px;
+}
+.card_1img {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .card_1img {
+    flex-direction: column;
+  }
+  .alag {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card_1img {
+    flex-direction: row;
+  }
+}
+.img4 {
+}
+.img1,
+.img2,
+.img3 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.103));
+}
+.img1 h4,
+.img2 h4,
+.img3 h4 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.cardsetting {
+  z-index: 1;
+}
+
+.maincard {
+  z-index: 99;
+  position: relative;
+  top: -10vh;
+  height: auto;
+  /* background-color: #364256; */
+}
+.shop {
+  /* position: fixed; */
+}
+
+.shop_cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Futura LT Light";
+}
+.shop_cont h1 {
+  padding: 0px 10px;
+}
+.shop_cont ul li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0px 5px 0px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.shop_cont ul {
+  display: flex;
+  justify-content: space-around;
+}
+.shop_cont h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-color: rgb(106, 208, 255);
+  text-decoration-thickness: 1px;
+}
+/* ------------------------------cards */
+.shop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop_card {
+  width: 15vw;
+}
+.shop_card img {
+  width: 100%;
+  height: auto;
+}
+.shop_card h2,
+.stars {
+  text-align: center;
+}
+.stars {
+  color: gold;
+  margin-top: 5px;
+}
+.rate {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Futura LT light";
+  font-size: 17px;
+  align-items: center;
+}
+.cut {
+  font-weight: 100;
+  text-decoration: line-through;
+}
+.price {
+  align-items: center;
+  display: flex;
+}
+.price h4 {
+  padding: 0px 5px;
+}
+.rate i {
+  transform: scale(1.4);
+  cursor: pointer;
+  padding: 0px 0px 0px 2vw;
+}
+/* -------------------------Second slide  */
+.swiper-slide {
+  display: flex;
+}
+.shoplist {
+  margin-top: 3rem;
+}
+/* .swiper-pagination,
+.swiper-pagination2,
+.swiper-pagination-clickable,
+.swiper-pagination-bullets,
+.swiper-pagination-horizontal {
+} */
+.swiper-pagination2 {
+  text-align: center;
+  padding-top: 15px;
+}
+:root {
+  --swiper-pagination-color: rgb(113, 255, 255);
+}
+
+/* -----------------------------Foote4r */
+/*CUSTOM SCROLL BAR*/
+*,
+html {
+  scroll-behavior: smooth;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69) !important;
+  scrollbar-width: thin !important;
+  --white: #fff;
+  --black: #131417;
+  --primary: #48c3c3;
+  --primarylite: #53b141;
+  --gray: #ffffff;
+  --dark: #000000;
+  --darklite: #364256;
+  --lite: #f8f9fa;
+}
+::-webkit-scrollbar {
+  height: 12px;
+  width: 8px;
+  background: var(--dark);
+}
+::-webkit-scrollbar-thumb {
+  background: gray;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+  background: var(--dark);
+}
+
+/*DEFAULT*/
+
+.title {
+  font-family: "Merriweather", serif;
+}
+#footer {
+  /* margin-top: 8rem; */
+}
+#footer a {
+  text-decoration: none;
+  transition: 0.5s;
+  outline: none !important;
+}
+
+#footer li {
+  list-style: none;
+  font-family: "Futura LT light";
+}
+
+#footer input,
+#footer textarea,
+#footer select,
+#footer button {
+  outline: none !important;
+  font-family: "Futura LT light";
+}
+
+#footer fieldset {
+  border: 0;
+}
+
+#footer p {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  line-height: 1.8em;
+  color: var(--gray);
+  font-family: "Futura LT light";
+}
+
+#footer img {
+  min-width: 100%;
+}
+
+#footer em {
+  font-style: normal;
+  color: var(--dark);
+}
+
+.btn1,
+.btn2 {
+  padding: 15px 20px;
+  border-radius: 40px;
+  text-align: center;
+  display: inline-block;
+  border: 0;
+}
+
+.btn1 {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn1:hover {
+  background-color: var(--primarylite);
+}
+
+.btn2 {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.btn2:hover {
+  background-color: var(--darklite);
+}
+
+@media (max-width: 820px) {
+  .btn1,
+  .btn2 {
+    padding: 10px 15px;
+  }
+}
+
+/*SECTION5*/
+.section5 {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.section5 section {
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.section5 section p {
+  color: rgba(1, 1, 1, 0.8);
+}
+
+.section5 section .btn2 {
+  float: right;
+}
+
+@media (max-width: 1020px) {
+  .section5 {
+    display: block;
+  }
+  .section5 section {
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  .section5 section .btn2 {
+    float: none;
+  }
+}
+
+/*FOOTER*/
+.footer {
+  background-color: var(--dark);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: top;
+  padding: 1rem 0;
+}
+
+.footer section {
+  padding: 1rem 2rem;
+  width: 100%;
+  vertical-align: top;
+}
+
+.footer section h3 {
+  color: var(--white);
+}
+
+.footer section a {
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 15px 0;
+}
+
+.footer section a:hover {
+  color: var(--white);
+}
+
+.footer section:nth-child(2) a:before,
+.footer section:nth-child(3) a:before {
+  content: "";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+  color: var(--white);
+}
+
+.footer section a span {
+  margin: 0 10px;
+}
+
+.sub-footer {
+  background-color: #142136;
+  text-align: Center;
+  color: var(--gray);
+  padding: 1rem 0;
+}
+.news {
+  font-family: "Futura LT light";
+  font-size: 2rem;
+}
+
+@media (max-width: 1020px) {
+  .footer {
+    display: block;
+  }
+  .footer section {
+    padding: 1rem 1rem;
+  }
+  .footer section:nth-child(2),
+  .footer section:nth-child(3) {
+    width: 49%;
+    display: inline-block;
+  }
+}
+
+.logo img {
+}
+.logo {
+  background-color: #000000;
+}
+.footerlogo {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding: 10px 0px 0px 0px;
+}
+.footerlogo img {
+  transform: scale(0.8);
+}
+.insta,
+.fac,
+.twi {
+  transform: scale(2.5);
+  margin: 5px 20px;
+  transition: all 0.25s;
+}
+.insta:hover,
+.fac:hover,
+.twi:hover {
+  transform: scale(3);
+}
